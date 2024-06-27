@@ -1,0 +1,42 @@
+---
+import Typography from "../components/Typography";
+
+
+const WELCOME = [
+    {
+        name: "Home",
+        route: "/"
+    }
+]
+
+const COMPONENTS = [
+    {
+        name: "Typography",
+        route: "/typography"
+    },
+    {
+        name: "Button",
+        route: "/button"
+    },
+    {
+        name: "Card",
+        route: "/card"
+    },
+]
+
+---
+
+<aside class="w-80  h-full   ">
+    <Typography tag="h4">Welcome</Typography> 
+    <ul>
+        {WELCOME.map(({route, name}) => (
+            <a href={route}><li>{name}</li></a>
+        ))}
+    </ul>
+    <Typography tag="h4">Components</Typography>
+    <ul>
+        {COMPONENTS.map(({route, name}) => (
+            <a href={`/components${route}`}><li>{name}</li></a>
+        ))}
+    </ul>
+</aside>

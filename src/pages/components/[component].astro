@@ -1,0 +1,24 @@
+---
+import Typography from '../../components/Typography';
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {component: 'typography'}},
+    {params: {component: 'button'}},
+    {params: {component: 'card'}},
+  ];
+}
+
+
+
+const { component } = Astro.params;
+---
+<Layout title="Components">
+    <main >
+        <Typography tag="h3">Components</Typography>
+        <div>Good component, {component}!</div>
+    </main>
+</Layout>
+
+

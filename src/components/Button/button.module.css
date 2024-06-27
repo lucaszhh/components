@@ -1,0 +1,17 @@
+.button{
+    background-color: var(--blue-color);
+    color: var(--white);
+    padding: 8px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.button:disabled{
+    background-color: var(--grey);
+    color: var(--white);
+    cursor: not-allowed;
+}
